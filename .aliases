@@ -13,3 +13,5 @@ alias dcomposer='docker run --rm \
     composer:latest \
     composer '
 alias cd..='cd ..'
+alias urldecode='sed "s@+@ @g;s@%@\\x@g" | xargs -0 printf "%b"'
+alias checkports="sudo lsof -i -P -n | grep LISTEN"
